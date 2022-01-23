@@ -1,0 +1,22 @@
+{
+  "name": "hw3",
+  "version": "1.0.0",
+  "description": "hw3",
+  "main": "scripts/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "rd -r scripts 2>null & tsc",
+    "start": "node .",
+    "lint": "eslint src --ext .js --ext .ts",
+    "lint-fix": "eslint src --ext .js --ext .ts --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "eslint": "^8.6.0",
+    "http-server": "^14.1.0",
+    "typescript": "^4.5.4"
+  }
+}
