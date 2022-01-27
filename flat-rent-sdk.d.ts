@@ -1,17 +1,10 @@
-interface FlatInfo {
+interface FormattedFlat {
   id: string
   title: string
   details: string
   photos: string[]
   coordinates: number[]
   bookedDates: number[]
-}
-
-interface Flat extends FlatInfo {
-  price: number
-}
-
-interface FormattedFlat extends FlatInfo {
   totalPrice: number
 }
 
@@ -31,7 +24,7 @@ export const backendPort: number
 export const localStorageKey: string
 
 export class FlatRentSdk {
-  get(id: string): Flat | FormattedFlat
+  get(id: string): null| FormattedFlat
   search(parameters: Parameters): FormattedFlat[]
 
   // * @param {number} flatId - в описании функции указано, что flatId число, но ссылка на id объекта, а это - строка
