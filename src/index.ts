@@ -50,7 +50,7 @@ function getFavoritesAmount (key: string) {
   if (typeof userInfo === 'number') {
     return userInfo
   } else {
-    console.log('error amount')
+    throw new Error('User in local storage is wrong')
   }
 }
 
